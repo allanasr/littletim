@@ -1,0 +1,63 @@
+{
+	"name": "PORTAO3",
+	"plugin-id": "Sprite",
+	"sid": 317486268224156,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 997140146077789
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 198,
+						"height": 651,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4514815,
+						"collisionPoly": {
+							"points": [
+								0.1717171717171717,
+								0.05222734254992319,
+								0.5,
+								0.03225806451612903,
+								0.8131313131313131,
+								0.055299539170506916,
+								0.8131313131313131,
+								0.5,
+								0.8131313131313131,
+								0.9431643625192012,
+								0.5,
+								0.9662058371735791,
+								0.1717171717171717,
+								0.946236559139785,
+								0.1717171717171717,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 579843640120445,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

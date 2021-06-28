@@ -1,0 +1,547 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 24100,
+	"name": "Game Jam",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texto",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Áudio",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "List",
+			"name": "Lista",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Fundo em blocos",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NodeWebkit",
+			"name": "NW.js",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Plataforma",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Atrelar",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Restrito ao layout",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Mover Para",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Centrar em",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		}
+	],
+	"uniqueId": "9nk1qt95jvs",
+	"objectTypes": {
+		"items": [
+			"Player",
+			"Chão",
+			"PlataformaI",
+			"TEMPO",
+			"Teclado",
+			"BOTAO",
+			"Áudio",
+			"PTrigger",
+			"COCA",
+			"Lista",
+			"BG1",
+			"Plataforma",
+			"IMA",
+			"CAMERA",
+			"PAINEL",
+			"BOTOESR",
+			"TRANSIÇAO",
+			"BOTOESA",
+			"BOTOESAZ",
+			"FundoEmBlocos",
+			"ESMAGADOR",
+			"ESMAGADOR2",
+			"AL1",
+			"AL2",
+			"AL3",
+			"CALDEIRA",
+			"PORTAO1",
+			"PORTAO2",
+			"PORTAO3",
+			"COMPACT",
+			"Mouse",
+			"FundoEmBlocos3",
+			"START",
+			"CREDITS",
+			"FundoEmBlocos2",
+			"YOUWIN",
+			"tijolo",
+			"TEMPOADD",
+			"cubin",
+			"FundoEmBlocos4",
+			"latinha",
+			"NWjs",
+			"FundoEmBlocos5",
+			"FundoEmBlocos6",
+			"VIT1",
+			"VIT2",
+			"VIT3",
+			"FundoEmBlocos7",
+			"Texto"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"CORES",
+					"CORES2",
+					"CORES3",
+					"CORES4",
+					"CORES5",
+					"CORES6",
+					"CORES7",
+					"CORES8",
+					"CORES9"
+				],
+				"subfolders": [],
+				"name": "CORES"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"CORESF",
+			"BOTOES",
+			"ALAVANCAS",
+			"PAREDES"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"FASE1",
+			"MENU",
+			"CREDITS"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"MAIN",
+			"SYSTEM",
+			"ANIMATION",
+			"PLAYER",
+			"AUDIO",
+			"IMA",
+			"PAINEL",
+			"ALAVANCAS",
+			"MENU",
+			"BLOCOS",
+			"VITÓRIA"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "passo_1.mp3",
+					"type": "audio/mpeg",
+					"sid": 807176943323033
+				},
+				{
+					"name": "passo_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 240063092588106
+				},
+				{
+					"name": "passo_3.mp3",
+					"type": "audio/mpeg",
+					"sid": 334971081726101
+				},
+				{
+					"name": "passo_4.mp3",
+					"type": "audio/mpeg",
+					"sid": 297443177297753
+				},
+				{
+					"name": "passo_5.mp3",
+					"type": "audio/mpeg",
+					"sid": 223144725999638
+				},
+				{
+					"name": "passo_6.mp3",
+					"type": "audio/mpeg",
+					"sid": 100282102224897
+				},
+				{
+					"name": "pulinho.mp3",
+					"type": "audio/mpeg",
+					"sid": 485044087870547
+				},
+				{
+					"name": "batendo_no_ima.mp3",
+					"type": "audio/mpeg",
+					"sid": 147292216993446
+				},
+				{
+					"name": "botao (1).mp3",
+					"type": "audio/mpeg",
+					"sid": 548925768926666
+				},
+				{
+					"name": "aterrissagem (1).mp3",
+					"type": "audio/mpeg",
+					"sid": 981206846316989
+				},
+				{
+					"name": "passo_7.mp3",
+					"type": "audio/mpeg",
+					"sid": 194737255718077
+				},
+				{
+					"name": "passo_8.mp3",
+					"type": "audio/mpeg",
+					"sid": 757079753556005
+				},
+				{
+					"name": "passo_9.mp3",
+					"type": "audio/mpeg",
+					"sid": 355901891322140
+				},
+				{
+					"name": "passo_10.mp3",
+					"type": "audio/mpeg",
+					"sid": 249705799483088
+				},
+				{
+					"name": "amassada_1.mp3",
+					"type": "audio/mpeg",
+					"sid": 977189838695429
+				},
+				{
+					"name": "ima2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 179210620317837
+				},
+				{
+					"name": "acertooooou.mp3",
+					"type": "audio/mpeg",
+					"sid": 596603676676666
+				},
+				{
+					"name": "bolhas.mp3",
+					"type": "audio/mpeg",
+					"sid": 913139822136295
+				},
+				{
+					"name": "eroooooou.mp3",
+					"type": "audio/mpeg",
+					"sid": 371732269884348
+				},
+				{
+					"name": "acertooooou_tudo.mp3",
+					"type": "audio/mpeg",
+					"sid": 985521962192398
+				},
+				{
+					"name": "amassadassa.mp3",
+					"type": "audio/mpeg",
+					"sid": 405878046926998
+				},
+				{
+					"name": "arrastadassa.mp3",
+					"type": "audio/mpeg",
+					"sid": 479568256165511
+				},
+				{
+					"name": "pulin_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 541580592565445
+				},
+				{
+					"name": "alavanca_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 480037747695719
+				},
+				{
+					"name": "alavanca_1.mp3",
+					"type": "audio/mpeg",
+					"sid": 606651698666365
+				},
+				{
+					"name": "porta.mp3",
+					"type": "audio/mpeg",
+					"sid": 835939658890516
+				},
+				{
+					"name": "passando_pelo_menu (1).mp3",
+					"type": "audio/mpeg",
+					"sid": 893216401389673
+				},
+				{
+					"name": "selecao.mp3",
+					"type": "audio/mpeg",
+					"sid": 647919909195337
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "Tema de Menu v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261089446866926
+				},
+				{
+					"name": "Tema_do_heroi_tuts_tuts_MK4.mp3",
+					"type": "audio/mpeg",
+					"sid": 610009503639649
+				},
+				{
+					"name": "In_Game_3_Final.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 980446319737935
+				},
+				{
+					"name": "In_Game_2_Final (1).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 573287472810016
+				},
+				{
+					"name": "In_Game_1_Final.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 217535871645004
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "VCR_OSD_MONO_1.001.ttf",
+					"type": "application/font-sfnt",
+					"sid": 260107951794441
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 525609413398048,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 628756740713020,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 802435250224653,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 417398398719199,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 776958287659585,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 426058186130096,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 979211260845387,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"useLoaderLayout": false,
+		"fullscreenMode": "scale-inner",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useHighDpi": true,
+		"orientations": "landscape",
+		"enableWebGL": true,
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"clearBackground": true,
+		"enhancedAccelerationPrecision": true,
+		"cordovaiOSScheme": "app"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": "MENU"
+}

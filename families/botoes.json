@@ -1,0 +1,13 @@
+{
+	"name": "BOTOES",
+	"plugin-id": "Sprite",
+	"sid": 246184217496225,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BOTOESA",
+		"BOTOESAZ",
+		"BOTOESR"
+	]
+}

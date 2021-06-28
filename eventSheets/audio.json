@@ -1,0 +1,261 @@
+{
+	"name": "AUDIO",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "Player",
+					"sid": 679260084821412,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 615229836118583,
+					"parameters": {
+						"audio-file": "aterrissagem (1)",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 997022460542209
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-jump",
+					"objectClass": "Player",
+					"sid": 761780240997127,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 343551155415009,
+					"parameters": {
+						"audio-file": "pulin_2",
+						"loop": "not-looping",
+						"volume": "10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 141270605634410
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-frame-changed",
+					"objectClass": "BOTAO",
+					"sid": 842851140110398
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 468927235666886,
+					"parameters": {
+						"audio-file": "botao (1)",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 601535156875548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Player",
+					"sid": 835976922730221,
+					"behaviorType": "Plataforma"
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "COCA",
+					"sid": 477543320880535,
+					"parameters": {
+						"animation": "\"Run\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 909795997011477,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 767298967647330,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Áudio",
+							"sid": 567961377088984,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "choose(\"passo_1\",\"passo_2\",\"passo_3\",\"passo_4\",\"passo_5\",\"passo_6\",\"passo_7\",\"passo_8\",\"passo_9\",\"passo_10\")",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 934744467776361
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 550081363823378
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 755050342902245,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"FASE1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 291261561474129,
+					"parameters": {
+						"audio-file": "In_Game_1_Final",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"1\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 921492051112710,
+					"parameters": {
+						"audio-file": "In_Game_2_Final (1)",
+						"loop": "looping",
+						"volume": "-20",
+						"tag-optional": "\"2\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 768714932616411,
+					"parameters": {
+						"audio-file": "In_Game_3_Final",
+						"loop": "looping",
+						"volume": "-20",
+						"tag-optional": "\"3\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 103553256165520,
+					"parameters": {
+						"tag": "\"menu\""
+					}
+				}
+			],
+			"sid": 484509562152137
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 997499484489767
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 235475516306241,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"MENU\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 739512059714594,
+					"parameters": {
+						"audio-file": "Tema de Menu v2",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"menu\""
+					}
+				},
+				{
+					"id": "set-master-volume",
+					"objectClass": "Áudio",
+					"sid": 438628849824215,
+					"parameters": {
+						"db": "-10"
+					}
+				}
+			],
+			"sid": 685106838712543
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-frame-changed",
+					"objectClass": "BOTOES",
+					"sid": 985410192398044
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 596773942670483,
+					"parameters": {
+						"audio-file": "botao (1)",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 438449424212402
+		}
+	],
+	"sid": 629839793618214
+}

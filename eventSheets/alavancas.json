@@ -1,0 +1,320 @@
+{
+	"name": "ALAVANCAS",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 197835492322633,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 837637956362831,
+					"parameters": {
+						"object": "ALAVANCAS"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 590024706157864,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "ALAVANCAS",
+							"sid": 326664201003935,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ALAVANCAS",
+							"sid": 567288869655704,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 476452451805997,
+							"parameters": {
+								"audio-file": "alavanca_1",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 612187785528788
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 327876625343568
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ALAVANCAS",
+							"sid": 711047595363655,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 930805386880992,
+							"parameters": {
+								"audio-file": "alavanca_2",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 413090911104865
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 621450435737674,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "AL1",
+					"sid": 348539638664407,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 945444198894732,
+					"parameters": {
+						"object": "AL1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "shake",
+					"objectClass": "PORTAO1",
+					"sid": 870407634000146,
+					"behaviorType": "CentrarEm",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.4",
+						"mode": "constant-magnitude"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "PORTAO1",
+					"sid": 292365024832888,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "5085",
+						"y": "533+512",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 445365821926042,
+					"parameters": {
+						"audio-file": "porta",
+						"loop": "looping",
+						"volume": "10",
+						"tag-optional": "\"arrasta\""
+					}
+				}
+			],
+			"sid": 145976604530593
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 253845378562835,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "AL2",
+					"sid": 313176564536322,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 905286962769551,
+					"parameters": {
+						"object": "AL2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "shake",
+					"objectClass": "PORTAO2",
+					"sid": 738070424193923,
+					"behaviorType": "CentrarEm",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.4",
+						"mode": "constant-magnitude"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "PORTAO2",
+					"sid": 244458367205275,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "6224",
+						"y": "533+512",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 949732707750427,
+					"parameters": {
+						"audio-file": "porta",
+						"loop": "looping",
+						"volume": "10",
+						"tag-optional": "\"arrasta\""
+					}
+				}
+			],
+			"sid": 174167271102042
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 632706582302995,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "AL3",
+					"sid": 542463470382582,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 122469124733619,
+					"parameters": {
+						"object": "AL3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "shake",
+					"objectClass": "PORTAO1",
+					"sid": 356155737078135,
+					"behaviorType": "CentrarEm",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.4",
+						"mode": "constant-magnitude"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "PORTAO3",
+					"sid": 755868395903964,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "7116",
+						"y": "533+512",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 886791325858156,
+					"parameters": {
+						"audio-file": "porta",
+						"loop": "looping",
+						"volume": "10",
+						"tag-optional": "\"arrasta\""
+					}
+				}
+			],
+			"sid": 328909062712975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "PAREDES",
+					"sid": 459069400697295,
+					"behaviorType": "MoverPara",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 935423147589864,
+					"parameters": {
+						"tag": "\"arrasta\""
+					}
+				}
+			],
+			"sid": 943934707942758
+		}
+	],
+	"sid": 436848635067945
+}

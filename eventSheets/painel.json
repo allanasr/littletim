@@ -1,0 +1,2700 @@
+{
+	"name": "PAINEL",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CONTACOR",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 914266929025672
+		},
+		{
+			"eventType": "variable",
+			"name": "CERTO",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 919420684653970
+		},
+		{
+			"eventType": "variable",
+			"name": "AMASSADO",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 437849437240511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 641670289060852
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "CORESF",
+					"sid": 680844520330961,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 461572289695050,
+					"parameters": {
+						"variable": "CONTACOR",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 519952064282338,
+					"parameters": {
+						"variable": "CERTO",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 825215778246195,
+					"parameters": {
+						"variable": "AMASSADO",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 333513668434343
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 257583800044911,
+					"parameters": {
+						"object": "BOTOES"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 589416169728768,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "BOTAO.Y "
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "BOTOES",
+					"sid": 658984040849042,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BOTOES",
+					"sid": 441548356164019,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "CAMERA",
+					"sid": 663918574296794,
+					"behaviorType": "CentrarEm",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 478462692581861,
+					"parameters": {
+						"variable": "CONTACOR",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 327634190126064,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 157017196355424,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 962524685180085,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 585690265018307,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 327166334736850,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES",
+							"sid": 979217674278918,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES",
+							"sid": 242754088115496,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 338945826057621,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 518982363823559,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 666663927698611
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 673431071954524
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 682676728673392,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 658960986035123,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 747800543255062,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 814745919257522,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES",
+							"sid": 244197990797158,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES",
+							"sid": 866625990549230,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 628698950908955,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 915533095426018,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 984018183484830
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 485339097457629
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 658413274213639,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 370897811064829,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CORES",
+							"sid": 734530460440774,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES",
+							"sid": 852063530145374,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 651150924444511,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 944997552222523,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 434547568834738,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 612904869240751,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 589766905886245
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 915002088450759,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 360562870864804,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 521383704751941,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 338829658858923,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES2",
+							"sid": 414763129255808,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES2",
+							"sid": 212208862668903,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 191952156818508,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 883302782918140,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 212946682728473
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 790175773870282
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 539350737016883,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 846954040384584,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 265172477204273,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 172094239116200,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES2",
+							"sid": 462402624388059,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES2",
+							"sid": 691095183120423,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 777323140539285,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 400068332845885,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 842979387151759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 592715863277107
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 850716189003995,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 731935182441197,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 924347391498255,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 695753343983949,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES2",
+							"sid": 719780648632364,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES2",
+							"sid": 136151864904402,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 196209293916939,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 792908653399261,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 970898157979272
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 857233558951950,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 275723571808580,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 339102756769058,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 459923804466199,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES3",
+							"sid": 489413322034685,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES3",
+							"sid": 502858518397055,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 799245117052794,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 867047020043270,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 506781206172607
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 815825421338646
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 597927895497022,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 444825031207008,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 822976127845442,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 130475154403534,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES3",
+							"sid": 530311157572235,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES3",
+							"sid": 442763356513662,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 999270900248340,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 147096369688367,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 376701699931111
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 284812391240544
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 475212881858733,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 172476343067528,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 152074113666529,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 648266491304118,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES3",
+							"sid": 908008837325632,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES3",
+							"sid": 711771975623259,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 603571326329630,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 723221719949696,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 985255269927955
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548796878839203,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "4"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 513685921537520,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 582047292980928,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 491213615015197,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES4",
+							"sid": 538645919563886,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES4",
+							"sid": 876728162266584,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 191866834676062,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 604555252474775,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 983600250242929
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 872413909331383
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 751274187463917,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "4"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 412658544565644,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 631559821365678,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 801848044764517,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES4",
+							"sid": 757224551868140,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES4",
+							"sid": 288650567784370,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 258468937378555,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 526589442406039,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 301115552251588
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 909697530736454
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 436351001510347,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "4"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 661985167464411,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 293880742939907,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 154566082398819,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES4",
+							"sid": 223990448230850,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES4",
+							"sid": 830696052755386,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 390021373695801,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 908224490565548,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 494375763971246
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 538578816816468,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 594313109956307,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 712305569504293,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 759901297001613,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES5",
+							"sid": 892666335923468,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES5",
+							"sid": 345107795682183,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 531224695438222,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 160400518736554,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 929153343173871
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 426509133652152
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 169798526251073,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 330072400015795,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 302835773438663,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 130779401737936,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES5",
+							"sid": 880880271973086,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES5",
+							"sid": 354735945284307,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 298314564023888,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 703135432408040,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 884076092265125
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 519776426686745
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 330677472078587,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 151206280276557,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 189853308984637,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 711692877644404,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES5",
+							"sid": 710269126012215,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES5",
+							"sid": 153538986970006,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 944352163351832,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 817922568269551,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 824583232054953
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 220082814621771,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 443422538002380,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 500980779233694,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 410261505126439,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES6",
+							"sid": 722734474608127,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES6",
+							"sid": 326536431150774,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 708027036296439,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 457465058431826,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 147495749681212
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 877501798188841
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 252097625347953,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 866587306816393,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 132398599705372,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 708996965869706,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES6",
+							"sid": 345965379213680,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES6",
+							"sid": 257706744510572,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 606717954583040,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 730038811794297,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 112839112972332
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 392018191662081
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 222288529644661,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 509764090975193,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 690740566101102,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 594082269431837,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES6",
+							"sid": 417968531456981,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES6",
+							"sid": 319111374824591,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 995929782691412,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 799186231314468,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 722575524127009
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 158157347620903,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "7"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 849436483166613,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 306879545988298,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 864338981023805,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES7",
+							"sid": 486517490000203,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES7",
+							"sid": 932216135668344,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 318492106940207,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 819922775785143,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 595161049701227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 857983938482780
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 618714564872050,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "7"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 788633481487432,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 790298775374651,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 536140722005747,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES7",
+							"sid": 371662788187496,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES7",
+							"sid": 388224530196139,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 761568953855463,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 199758105860246,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 699407694884961
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 986889819435249
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 930411780992009,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "7"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 799579302190088,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 438138500905630,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 384502309522311,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES7",
+							"sid": 457672906145264,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES7",
+							"sid": 848517961011213,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 955981117834212,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 941661507093667,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 308605953008818
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 282058706924906,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 475687951725257,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 803040885026292,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 317769789276292,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES8",
+							"sid": 153348390714284,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES8",
+							"sid": 764337238702776,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 230225256142143,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 821095132160372,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 240358473920176
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 773001143230950
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 637621459257054,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 668172000109415,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 153187361314861,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 261994906564808,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES8",
+							"sid": 169496287804711,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES8",
+							"sid": 252277573345475,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 694822773871144,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 929731886520172,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 518144905976428
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 856275667309568
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 261315092146630,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 996024061244617,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 959794841256410,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 962898071498938,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES8",
+							"sid": 377509333181489,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES8",
+							"sid": 346264282651666,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 481463600222269,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 965303005445995,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 775855683090654
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 749040493709233,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "9"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESR",
+							"sid": 130687717863979,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 232385312742691,
+							"parameters": {
+								"audio-file": "acertooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 810210187507509,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES9",
+							"sid": 905524608221049,
+							"parameters": {
+								"animation": "\"ROSA\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES9",
+							"sid": 683557581642062,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 877953735575219,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 444239185177536,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 465906766635382
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 651334804357944
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 158901635120308,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "9"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESAZ",
+							"sid": 879814730900782,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 808854274570018,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 828883211703447,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES9",
+							"sid": 872126682191742,
+							"parameters": {
+								"animation": "\"AZUL\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES9",
+							"sid": 525755439823547,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 451540770132671,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 886207932992852,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 908693353565094
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 463555817303641
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 787189036034671,
+							"parameters": {
+								"variable": "CONTACOR",
+								"comparison": 0,
+								"value": "9"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BOTOESA",
+							"sid": 148971028456920,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 645988728938033,
+							"parameters": {
+								"variable": "CONTACOR",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 226954981488019,
+							"parameters": {
+								"audio-file": "eroooooou",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CORES9",
+							"sid": 879710762770228,
+							"parameters": {
+								"animation": "\"AMARELO\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CORES9",
+							"sid": 212596211695333,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 461461313617153,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BOTOES",
+							"sid": 972742562956545,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 609654371921511
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 761333467929088,
+					"parameters": {
+						"variable": "CERTO",
+						"comparison": 0,
+						"value": "9"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 506912365538896
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 445290484919340,
+					"parameters": {
+						"audio-file": "acertooooou_tudo",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 472744230906049,
+					"parameters": {
+						"audio-file": "arrastadassa",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ESMAGADOR",
+					"sid": 596385459858252,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ESMAGADOR2",
+					"sid": 893443383245794,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "ESMAGADOR",
+					"sid": 230025139050269,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "960*3",
+						"y": "540",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "ESMAGADOR2",
+					"sid": 907580505334009,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "960*3",
+						"y": "540",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-solid-collision-filter",
+					"objectClass": "ESMAGADOR",
+					"sid": 406260102468110,
+					"parameters": {
+						"mode": "inclusive",
+						"tags": "\"ESMAGADOR2\""
+					}
+				},
+				{
+					"id": "set-solid-collision-filter",
+					"objectClass": "ESMAGADOR2",
+					"sid": 632265342106897,
+					"parameters": {
+						"mode": "inclusive",
+						"tags": "\"ESMAGADOR\""
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "ESMAGADOR",
+					"sid": 942076141854324,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "ESMAGADOR2",
+					"sid": 697020024627095,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 467157371327496,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "COCA",
+					"sid": 379422681912437,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "COMPACT",
+					"sid": 487634838905988,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 963819855430125,
+					"parameters": {
+						"audio-file": "amassadassa",
+						"loop": "not-looping",
+						"volume": "10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 240779482827696,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "ESMAGADOR",
+					"sid": 798525633913593,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "0",
+						"y": "540",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "ESMAGADOR2",
+					"sid": 690270604349381,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "4000",
+						"y": "540",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "ESMAGADOR",
+					"sid": 734956503780401,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"max-speed": "600"
+					}
+				},
+				{
+					"id": "set-deceleration",
+					"objectClass": "ESMAGADOR",
+					"sid": 225695856247312,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"deceleration": "600"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "ESMAGADOR2",
+					"sid": 290320437993168,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"max-speed": "600"
+					}
+				},
+				{
+					"id": "set-deceleration",
+					"objectClass": "ESMAGADOR2",
+					"sid": 716888094853561,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"deceleration": "600"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 924828317942510,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ESMAGADOR",
+					"sid": 526040189857914,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ESMAGADOR2",
+					"sid": 775095473882394,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "ESMAGADOR",
+					"sid": 243437107522220,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "ESMAGADOR2",
+					"sid": 969447626836468,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 863057584847670,
+					"parameters": {
+						"variable": "AMASSADO",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 995034357583053
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 175293434594248,
+					"parameters": {
+						"variable": "CONTACOR",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "CORESF",
+					"sid": 731062401184855,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 208856107768330,
+					"parameters": {
+						"variable": "CERTO",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 734372623868600
+		}
+	],
+	"sid": 772984388377004
+}

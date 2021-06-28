@@ -1,0 +1,286 @@
+{
+	"name": "VITÓRIA",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 611222013378100,
+					"parameters": {
+						"object": "CALDEIRA"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 219116712401513
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 886024989702224
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 853312454721544,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tijolo",
+					"sid": 416724563688647,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "YOUWIN",
+					"sid": 635663725720054,
+					"parameters": {
+						"x": "960",
+						"y": "540"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 324014041160186,
+					"parameters": {
+						"audio-file": "Tema_do_heroi_tuts_tuts_MK4",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"credits\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VIT1",
+					"sid": 275701184388082,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 122191164419206,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 953678124099099,
+					"parameters": {
+						"layout": "CREDITS"
+					}
+				}
+			],
+			"sid": 230716334447973
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "TEMPO",
+					"sid": 716335635893265,
+					"parameters": {
+						"instance-variable": "Tempo",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "COCA",
+					"sid": 933860208720275
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 789400183310894
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 785582895920335,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "latinha",
+					"sid": 673518855798216,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "YOUWIN",
+					"sid": 780079877277581,
+					"parameters": {
+						"x": "960",
+						"y": "540"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 245068343657633,
+					"parameters": {
+						"audio-file": "Tema_do_heroi_tuts_tuts_MK4",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"credits\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VIT3",
+					"sid": 699797667061099,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 361480464351929,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 549045244249761,
+					"parameters": {
+						"layout": "CREDITS"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 874658762091082,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				}
+			],
+			"sid": 747677365650703
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "COMPACT",
+					"sid": 176664705945694
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "TEMPO",
+					"sid": 561298833629633,
+					"parameters": {
+						"instance-variable": "Tempo",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 632969500600715
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 761487983258868,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "cubin",
+					"sid": 636888389391138,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "YOUWIN",
+					"sid": 818388159782950,
+					"parameters": {
+						"x": "960",
+						"y": "540"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 480474077201900,
+					"parameters": {
+						"audio-file": "Tema_do_heroi_tuts_tuts_MK4",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"credits\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VIT2",
+					"sid": 720812194080771,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 209002496890519,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 137859556659186,
+					"parameters": {
+						"layout": "CREDITS"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 258888355732289,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				}
+			],
+			"sid": 175571918485435
+		}
+	],
+	"sid": 709162535139195
+}

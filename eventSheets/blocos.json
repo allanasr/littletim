@@ -1,0 +1,75 @@
+{
+	"name": "BLOCOS",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 846677598744386
+				}
+			],
+			"actions": [],
+			"sid": 535117297690561,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 686701313916399,
+							"parameters": {
+								"object": "PTrigger"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PlataformaI",
+							"sid": 256247818273300,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PlataformaI",
+							"sid": 904410258889233,
+							"parameters": {
+								"x": "PTrigger.X",
+								"y": "PTrigger.Y "
+							}
+						}
+					],
+					"sid": 376792457930118
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 410860809347426
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "PlataformaI",
+							"sid": 634544484497534,
+							"parameters": {
+								"x": "4000",
+								"y": "4000"
+							}
+						}
+					],
+					"sid": 462990128117314
+				}
+			]
+		}
+	],
+	"sid": 573882772153428
+}

@@ -1,0 +1,358 @@
+{
+	"name": "ANIMATION",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 733872288124827,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "COCA",
+					"sid": 459097431099854,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "COMPACT",
+					"sid": 230173728297820,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 109578726950428,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 221240052693447,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 201952039425865,
+							"behaviorType": "Plataforma"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "COCA",
+							"sid": 622970192007086,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "COMPACT",
+							"sid": 647060205837816,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 909715914598631
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 107358164642048,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "COCA",
+					"sid": 840445067780603,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "COMPACT",
+					"sid": 486289744132198,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 648350138531835,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 791379325862427,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 255826627169445,
+							"behaviorType": "Plataforma"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "COCA",
+							"sid": 831521551066444,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "COMPACT",
+							"sid": 573900093822624,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 803906542665848
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 202764327900263
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Player",
+					"sid": 462032486660041,
+					"behaviorType": "Plataforma",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 316869827095723,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 673831524830655,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 195639486501045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 927603324480780,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 976821055266115,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 542710010404029,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 453432154537522,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "set-repeat-to-frame",
+					"objectClass": "COCA",
+					"sid": 661748158452824,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-repeat-to-frame",
+					"objectClass": "COMPACT",
+					"sid": 247515967177717,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 829603289168761
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 273191965328783,
+					"parameters": {
+						"key": 87
+					}
+				},
+				{
+					"id": "is-double-jump-enabled",
+					"objectClass": "Player",
+					"sid": 119681697373784,
+					"behaviorType": "Plataforma"
+				},
+				{
+					"id": "is-on-floor",
+					"objectClass": "Player",
+					"sid": 730027184898388,
+					"behaviorType": "Plataforma",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 564351242000727,
+					"parameters": {
+						"animation": "\"DoubleJump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 951394172867686,
+					"parameters": {
+						"animation": "\"DoubleJump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 868346101513568,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 322919536181009,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 719255956246482,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 633977517834348
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-falling",
+					"objectClass": "Player",
+					"sid": 982224443487468,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 103152965624826,
+					"parameters": {
+						"animation": "\"Fall\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 947321297881160,
+					"parameters": {
+						"animation": "\"Fall\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 154681693085213
+		}
+	],
+	"sid": 356708116090076
+}

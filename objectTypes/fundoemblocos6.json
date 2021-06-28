@@ -1,0 +1,20 @@
+{
+	"name": "FundoEmBlocos6",
+	"plugin-id": "TiledBg",
+	"sid": 965873784409586,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 1920,
+		"height": 1080,
+		"originX": 0.47110675808031344,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8037460,
+		"useCollisionPoly": true
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"name": "MAIN",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "SYSTEM"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ANIMATION"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "PLAYER"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "AUDIO"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "IMA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "PAINEL"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ALAVANCAS"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MENU"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "BLOCOS"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "VITÓRIA"
+		}
+	],
+	"sid": 851827619610530
+}

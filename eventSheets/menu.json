@@ -1,0 +1,201 @@
+{
+	"name": "MENU",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 725990086826291,
+					"parameters": {
+						"object": "CREDITS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "CREDITS",
+					"sid": 743446940793050,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 271972726566005,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 256000329719237
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 728754231791050,
+							"parameters": {
+								"audio-file": "passando_pelo_menu (1)",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 925327169794087
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 701005542304326
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "CREDITS",
+					"sid": 695459207170412,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 665113254368397
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 702277872713324,
+					"parameters": {
+						"object": "START"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "START",
+					"sid": 797047760475768,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 134507292463993,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 802088772893174
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 827748874623020,
+							"parameters": {
+								"audio-file": "passando_pelo_menu (1)",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 141058656678488
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 575367168931031
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "START",
+					"sid": 448391818022100,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 489413652176821
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 779748424073961,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "START"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 694481987847555,
+					"parameters": {
+						"layout": "FASE1"
+					}
+				}
+			],
+			"sid": 339604710331670
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469783119386648,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CREDITS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 897864675343201,
+					"parameters": {
+						"layout": "CREDITS"
+					}
+				}
+			],
+			"sid": 776619742286951
+		}
+	],
+	"sid": 737939575302232
+}

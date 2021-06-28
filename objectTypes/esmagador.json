@@ -1,0 +1,60 @@
+{
+	"name": "ESMAGADOR",
+	"plugin-id": "Sprite",
+	"sid": 319188774700408,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoverPara",
+			"sid": 707199471656039
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 919107398160429
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 581,
+						"height": 651,
+						"originX": 0.963855421686747,
+						"originY": 0.4946236559139785,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3545072,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9483648881239243,
+								0,
+								0.951807228915663,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 385218896677458,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

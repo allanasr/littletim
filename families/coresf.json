@@ -1,0 +1,19 @@
+{
+	"name": "CORESF",
+	"plugin-id": "Sprite",
+	"sid": 248333620758896,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"CORES9",
+		"CORES",
+		"CORES2",
+		"CORES3",
+		"CORES4",
+		"CORES5",
+		"CORES6",
+		"CORES7",
+		"CORES8"
+	]
+}

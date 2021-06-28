@@ -1,0 +1,121 @@
+{
+	"name": "CALDEIRA",
+	"plugin-id": "Sprite",
+	"sid": 875866236473310,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 191,
+						"height": 173,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7821376,
+						"collisionPoly": {
+							"points": [
+								0.40314136125654443,
+								0.4450867052023122,
+								0.5,
+								0.4450867052023122,
+								0.5916230366492147,
+								0.4450867052023122,
+								0.8115183246073299,
+								0.5,
+								0.9476439790575916,
+								0.9421965317919075,
+								0.5,
+								0.9942196531791907,
+								0.02617801047120416,
+								0.9653179190751445,
+								0.09424083769633507,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 191,
+						"height": 173,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6273412,
+						"collisionPoly": {
+							"points": [
+								0.9057591623036649,
+								0.5,
+								0.9738219895287958,
+								0.9653179190751445,
+								0.5,
+								0.9942196531791907,
+								0.05235602094240843,
+								0.9421965317919075,
+								0.18848167539267013,
+								0.5,
+								0.4083769633507853,
+								0.44508670520231214,
+								0.5,
+								0.44508670520231214,
+								0.5968586387434556,
+								0.44508670520231214
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 191,
+						"height": 173,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3628059,
+						"collisionPoly": {
+							"points": [
+								0.9057591623036649,
+								0.5,
+								0.9738219895287958,
+								0.9653179190751445,
+								0.5,
+								0.9942196531791907,
+								0.05235602094240843,
+								0.9421965317919075,
+								0.18848167539267013,
+								0.5,
+								0.4083769633507853,
+								0.44508670520231214,
+								0.5,
+								0.30057803468208094,
+								0.5968586387434556,
+								0.44508670520231214
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 920915767147848,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"name": "ALAVANCAS",
+	"plugin-id": "Sprite",
+	"sid": 320725810659613,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"AL3",
+		"AL2",
+		"AL1"
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"name": "PAINEL",
+	"plugin-id": "Sprite",
+	"sid": 191902174602835,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.26,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1880340,
+						"collisionPoly": {
+							"points": [
+								0.08333333333333333,
+								0,
+								0.5,
+								0.08,
+								0.84375,
+								0.08,
+								0.96875,
+								0.26,
+								0.9479166666666666,
+								0.8,
+								0.5,
+								0.88,
+								0.041666666666666664,
+								0.8,
+								0.020833333333333332,
+								0.26
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 751467664132761,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

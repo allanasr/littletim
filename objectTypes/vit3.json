@@ -1,0 +1,15 @@
+{
+	"name": "VIT3",
+	"plugin-id": "Text",
+	"sid": 525076836713796,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Atrelar",
+			"sid": 428323939876390
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,58 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 619591816102138,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Plataforma",
+			"sid": 197757056990502
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Atrelar",
+			"sid": 296693550960058
+		},
+		{
+			"behaviorId": "bound",
+			"name": "RestritoAoLayout",
+			"sid": 790457422657930
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoverPara",
+			"sid": 267391046186244
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8466848,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 639702709564760,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

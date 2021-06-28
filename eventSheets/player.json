@@ -1,0 +1,59 @@
+{
+	"name": "PLAYER",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 189080082822990,
+					"parameters": {
+						"object": "BOTAO"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 131614174171709,
+					"parameters": {
+						"comparison": 3,
+						"y-co-ordinate": "BOTAO.Y -50"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "BOTAO",
+					"sid": 193474840758449,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BOTAO",
+					"sid": 976175426519908,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "CAMERA",
+					"sid": 987615716314353,
+					"behaviorType": "CentrarEm",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 662404666687813
+		}
+	],
+	"sid": 934430850244589
+}

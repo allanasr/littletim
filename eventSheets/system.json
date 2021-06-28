@@ -1,0 +1,263 @@
+{
+	"name": "SYSTEM",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 378658285628232
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "COCA",
+					"sid": 757427483319028,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "Player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "COMPACT",
+					"sid": 615087560474343,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "Player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "tijolo",
+					"sid": 146879306695216,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "latinha",
+					"sid": 908076146531122,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "cubin",
+					"sid": 743492578577720,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "VIT1",
+					"sid": 649107924230705,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "VIT2",
+					"sid": 750084814675124,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "VIT3",
+					"sid": 319391968819246,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "YOUWIN",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 296883361547944
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 392529396340635
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TEMPO",
+					"sid": 197486490333825,
+					"parameters": {
+						"text": "TEMPO.Tempo"
+					}
+				},
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 368070275562140,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"sid": 178256864826870
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 438574149566708,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 903762677499817
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 811097562364561,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 482956697952131,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "stop-ignoring"
+					}
+				}
+			],
+			"sid": 562116475286456
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 627644885664574,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "TEMPO",
+					"sid": 186501053536436,
+					"parameters": {
+						"instance-variable": "Tempo",
+						"comparison": 5,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "TEMPO",
+					"sid": 144412217339242,
+					"parameters": {
+						"instance-variable": "Tempo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 900501265304405
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Player",
+					"sid": 690076259313137
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 772904633169406,
+					"disabled": true,
+					"parameters": {
+						"object": "CAMERA"
+					}
+				}
+			],
+			"sid": 130418839846947
+		}
+	],
+	"sid": 198275051913389
+}

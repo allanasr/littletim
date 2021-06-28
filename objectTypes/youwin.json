@@ -1,0 +1,57 @@
+{
+	"name": "YOUWIN",
+	"plugin-id": "Sprite",
+	"sid": 694985155661776,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 657,
+						"height": 452,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8030199,
+						"collisionPoly": {
+							"points": [
+								0.0700152207001522,
+								0.10176991150442478,
+								0.5,
+								0.084070796460177,
+								0.9330289193302892,
+								0.09513274336283185,
+								0.9345509893455098,
+								0.5,
+								0.9254185692541856,
+								0.8915929203539823,
+								0.5,
+								0.8938053097345132,
+								0.0745814307458143,
+								0.8893805309734514,
+								0.0700152207001522,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 173484253229772,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

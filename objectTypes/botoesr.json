@@ -1,0 +1,159 @@
+{
+	"name": "BOTOESR",
+	"plugin-id": "Sprite",
+	"sid": 736854029160533,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 46,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2797406,
+						"collisionPoly": {
+							"points": [
+								0.19887429643527207,
+								0.4,
+								0.4146341463414634,
+								0.05,
+								0.7598499061913696,
+								0.16666666666666666,
+								0.8893058161350845,
+								0.5166666666666667,
+								0.8030018761726078,
+								0.8666666666666667,
+								0.4146341463414634,
+								0.925,
+								0.026266416510318965,
+								0.8083333333333333,
+								0.06941838649155724,
+								0.5166666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 46,
+						"height": 22,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 116519,
+						"collisionPoly": {
+							"points": [
+								0.3151969981238274,
+								0.19736842105263158,
+								0.4878048780487805,
+								0.10526315789473684,
+								0.6604127579737336,
+								0.10526315789473684,
+								0.9624765478424017,
+								0.2894736842105263,
+								0.8761726078799249,
+								0.8421052631578947,
+								0.4878048780487805,
+								0.9342105263157895,
+								0.09943714821763604,
+								0.75,
+								0.14258911819887432,
+								0.2894736842105263
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 339751297990251,
+				"name": "ROSA",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 46,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8067102,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 46,
+						"height": 22,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1512847,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 284436250153909,
+				"name": "AMARELO",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 46,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2038205,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 46,
+						"height": 22,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7219063,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 737027575677556,
+				"name": "AZUL",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

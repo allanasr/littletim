@@ -1,0 +1,24 @@
+{
+	"name": "PAREDES",
+	"plugin-id": "Sprite",
+	"sid": 955914381368444,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoverPara",
+			"sid": 211447070484312
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "CentrarEm",
+			"sid": 664471291774529
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"PORTAO1",
+		"PORTAO2",
+		"PORTAO3"
+	]
+}

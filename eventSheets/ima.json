@@ -1,0 +1,778 @@
+{
+	"name": "IMA",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LOCKADA",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 764171450184792
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "BOTAO",
+					"sid": 675341181968894,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "IMA",
+					"sid": 873123662126024,
+					"parameters": {
+						"animation": "\"Active\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Player",
+					"sid": 371483704867274,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"object": "IMA",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 268754179778490,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"gravity": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 619271432135737,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 918657054551372,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 167185017971156,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Plataforma",
+					"sid": 297573976909978,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 323445420057730,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 350677818624108
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "IMA",
+							"sid": 512040257774850,
+							"parameters": {
+								"animation": "\"Active\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 121765079334556,
+							"parameters": {
+								"audio-file": "ima2",
+								"loop": "not-looping",
+								"volume": "100",
+								"tag-optional": "\"ima\""
+							}
+						}
+					],
+					"sid": 855500126841716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "IMA",
+							"sid": 842131315780920,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "IMA",
+							"sid": 626519701080444,
+							"behaviorType": "MoverPara",
+							"parameters": {
+								"x": "2880",
+								"y": "266",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Player",
+							"sid": 716505470681222,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "CAMERA",
+							"sid": 650374177319348,
+							"behaviorType": "MoverPara",
+							"parameters": {
+								"x": "(960*3)",
+								"y": "CAMERA.Y",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 102455911621747,
+							"parameters": {
+								"audio-file": "batendo_no_ima",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 469712778426944
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "IMA",
+					"sid": 846196053140489,
+					"behaviorType": "MoverPara"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Player",
+					"sid": 241003801504288,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BOTAO",
+					"sid": 903556266689376,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 949772709194396,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "stop-ignoring"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 181637865817720,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"gravity": "1500"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Plataforma",
+					"sid": 872776485252571,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "IMA",
+					"sid": 578262936465628,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 824829759305767,
+					"parameters": {
+						"tag": "\"ima\""
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Áudio",
+					"sid": 858333158545917,
+					"parameters": {
+						"tag": "\"1\"",
+						"db": "-20"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Áudio",
+					"sid": 756218583161501,
+					"parameters": {
+						"tag": "\"2\"",
+						"db": "0"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "TEMPO",
+					"sid": 619692537016527,
+					"parameters": {
+						"instance-variable": "Tempo",
+						"value": "120"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TEMPOADD",
+					"sid": 431980215302511,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 216280277582949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 736734332128841,
+					"parameters": {
+						"variable": "CERTO",
+						"comparison": 0,
+						"value": "9"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 874463366026787,
+					"parameters": {
+						"variable": "AMASSADO",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 743338953391360,
+					"parameters": {
+						"variable": "LOCKADA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "IMA",
+					"sid": 635178227368288,
+					"parameters": {
+						"animation": "\"Active\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Player",
+					"sid": 151076766880899,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"object": "IMA",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 837400687370459,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"gravity": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COMPACT",
+					"sid": 250869011211805,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "COCA",
+					"sid": 323482414699442,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Player",
+					"sid": 393367828435794,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Plataforma",
+					"sid": 292680582346918,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 638210272846354,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 932689237392916,
+							"parameters": {
+								"object": "IMA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 915037561871273,
+							"parameters": {
+								"audio-file": "batendo_no_ima",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 361325735253108
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 757173408618241
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "IMA",
+							"sid": 641385784450770,
+							"parameters": {
+								"animation": "\"Active\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 805199517079182,
+							"parameters": {
+								"audio-file": "ima2",
+								"loop": "not-looping",
+								"volume": "100",
+								"tag-optional": "\"ima\""
+							}
+						}
+					],
+					"sid": 641406986573910
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "IMA",
+							"sid": 271907393933639,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "IMA",
+							"sid": 806059580029252,
+							"behaviorType": "MoverPara",
+							"parameters": {
+								"x": "960*5",
+								"y": "266",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Player",
+							"sid": 212898747284047,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "CAMERA",
+							"sid": 940123760320027,
+							"behaviorType": "MoverPara",
+							"parameters": {
+								"x": "(960*5)",
+								"y": "CAMERA.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 499949779843027
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "IMA",
+							"sid": 777612286366531,
+							"behaviorType": "MoverPara"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Player",
+							"sid": 481952369353228,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "Player",
+							"sid": 385754184165554,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"input": "stop-ignoring"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "Player",
+							"sid": 638145100703241,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"gravity": "1500"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Plataforma",
+							"sid": 916860599835099,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "IMA",
+							"sid": 954499993352414,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 504461867341049,
+							"parameters": {
+								"variable": "CERTO",
+								"value": "0"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Áudio",
+							"sid": 706454327006782,
+							"parameters": {
+								"tag": "\"ima\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 717372768537847,
+							"parameters": {
+								"audio-file": "bolhas",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Áudio",
+							"sid": 984132141682277,
+							"parameters": {
+								"tag": "\"2\"",
+								"db": "-20"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Áudio",
+							"sid": 802795031700958,
+							"parameters": {
+								"tag": "\"3\"",
+								"db": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TEMPOADD",
+							"sid": 434981808841862,
+							"parameters": {
+								"text": "\"+60s\""
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "TEMPO",
+							"sid": 474015742573909,
+							"parameters": {
+								"instance-variable": "Tempo",
+								"value": "60"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TEMPOADD",
+							"sid": 327057969816308,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 453396887438369,
+							"parameters": {
+								"variable": "LOCKADA",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 572450357020355
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "TEMPOADD",
+					"sid": 620334156078473
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "TEMPOADD",
+					"sid": 274490111683645,
+					"parameters": {
+						"comparison": 1,
+						"opacity": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TEMPOADD",
+					"sid": 162781580731596,
+					"parameters": {
+						"opacity": "TEMPOADD.Opacity - 1"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "TEMPOADD",
+					"sid": 729013227428604,
+					"parameters": {
+						"y": "TEMPOADD.Y -0.2"
+					}
+				}
+			],
+			"sid": 736052755531014
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 335070632987976
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 603107770866130
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TEMPOADD",
+					"sid": 501895032138503,
+					"parameters": {
+						"y": "232"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TEMPOADD",
+					"sid": 636081443508018,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TEMPOADD",
+					"sid": 189049264032246,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 297423843171259
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "AL1",
+					"sid": 229868482227806,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "CAMERA",
+					"sid": 288432077616141,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "960*6",
+						"y": "540",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 424933101170410
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "AL2",
+					"sid": 474896656677171,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "CAMERA",
+					"sid": 133009540606875,
+					"behaviorType": "MoverPara",
+					"parameters": {
+						"x": "960*7",
+						"y": "540",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 488322963721271
+		}
+	],
+	"sid": 236843969995195
+}

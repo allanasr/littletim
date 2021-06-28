@@ -1,0 +1,16 @@
+{
+	"name": "TEMPO",
+	"plugin-id": "Text",
+	"sid": 782394825166610,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Tempo",
+			"type": "number",
+			"desc": "",
+			"sid": 978882819995446
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

@@ -1,3 +1,3 @@
 # Little Tim
-Meu primeiro joguinho para uma game jam
-Você pode joga-lo acessando o link: https://tooizy.itch.io/little-tim
+My first little game made in 3 days for a gamejam
+You can play it through the link: https://tooizy.itch.io/little-tim
